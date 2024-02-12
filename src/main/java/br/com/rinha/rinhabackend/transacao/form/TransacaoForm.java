@@ -1,4 +1,4 @@
-package br.com.rinha.rinhabackend.cliente.form;
+package br.com.rinha.rinhabackend.transacao.form;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

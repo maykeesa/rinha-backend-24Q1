@@ -1,2 +1,6 @@
-package br.com.rinha.rinhabackend.cliente;public class ClienteRepository {
+package br.com.rinha.rinhabackend.cliente;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
 }
