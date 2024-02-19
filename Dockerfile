@@ -1,4 +1,5 @@
 #FROM container-registry.oracle.com/graalvm/native-image
+#FROM openjdk
 #FROM maven
 
 #WORKDIR /rinha
@@ -7,11 +8,9 @@
 
 #CMD java -jar ./target/rinha-backend-0.0.1-SNAPSHOT.jar
 
-FROM container-registry.oracle.com/graalvm/native-image
+FROM vegardit/graalvm-maven:latest-java21
 WORKDIR /rinha
 COPY . .
-
-FROM maven
 RUN mvn clean package
 
 CMD java -jar ./target/rinha-backend-0.0.1-SNAPSHOT.jar
