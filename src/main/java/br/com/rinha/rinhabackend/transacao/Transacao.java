@@ -18,8 +18,8 @@ public class Transacao {
     @ManyToOne
     private Cliente cliente;
     private int valor;
-    private String tipo;
-    private TipoEnum descricao;
+    private TipoEnum tipo;
+    private String descricao;
     @CreationTimestamp
     private LocalDateTime realizada_em;
 
@@ -46,11 +46,11 @@ public class Transacao {
         return valor;
     }
 
-    public String getTipo() {
+    public TipoEnum getTipo() {
         return tipo;
     }
 
-    public TipoEnum getDescricao() {
+    public String getDescricao() {
         return descricao;
     }
 

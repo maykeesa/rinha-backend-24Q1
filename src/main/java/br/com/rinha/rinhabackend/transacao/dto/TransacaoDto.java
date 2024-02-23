@@ -9,8 +9,8 @@ import java.util.List;
 public class TransacaoDto {
 
     private int valor;
-    private String tipo;
-    private TipoEnum descricao;
+    private TipoEnum tipo;
+    private String descricao;
     private LocalDateTime realizadaEm;
 
     public TransacaoDto(Transacao transacao){
@@ -24,11 +24,11 @@ public class TransacaoDto {
         return valor;
     }
 
-    public String getTipo() {
+    public TipoEnum getTipo() {
         return tipo;
     }
 
-    public TipoEnum getDescricao() {
+    public String getDescricao() {
         return descricao;
     }
 

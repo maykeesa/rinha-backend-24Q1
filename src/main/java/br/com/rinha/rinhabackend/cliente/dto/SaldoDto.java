@@ -3,6 +3,8 @@ package br.com.rinha.rinhabackend.cliente.dto;
 import br.com.rinha.rinhabackend.cliente.Cliente;
 
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+import java.util.TimeZone;
 
 public class SaldoDto {
 
@@ -12,7 +14,7 @@ public class SaldoDto {
 
     public SaldoDto(Cliente cliente){
         this.total = cliente.getSaldo();
-        this.dataExtrato = LocalDateTime.now();
+        this.dataExtrato = LocalDateTime.now().atZone(ZonedDateTime.now().getZone()).toLocalDateTime();
         this.limite = cliente.getLimite();
     }
 
