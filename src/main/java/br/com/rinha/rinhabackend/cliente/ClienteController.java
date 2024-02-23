@@ -43,9 +43,9 @@ public class ClienteController {
             if(clienteTransacao.isPresent()){
                 Cliente cliente = clienteTransacao.get();
                 return ResponseEntity.ok(new ClienteDto(cliente.getLimite(), cliente.getSaldo()));
+            }else{
+                return ResponseEntity.unprocessableEntity().build();
             }
-
-            return ResponseEntity.unprocessableEntity().build();
         }
 
         return ResponseEntity.notFound().build();
