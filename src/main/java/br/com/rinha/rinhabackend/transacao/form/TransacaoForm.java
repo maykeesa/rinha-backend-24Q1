@@ -9,7 +9,7 @@ public class TransacaoForm {
 
     private int valor;
     private TipoEnum tipo;
-    @Size(min = 1, max = 10) @Min(1) @Max(10)
+    @Size(min = 1, max = 10)
     private String descricao;
 
     public TransacaoForm(){
