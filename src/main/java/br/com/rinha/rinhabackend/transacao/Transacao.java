@@ -1,6 +1,7 @@
 package br.com.rinha.rinhabackend.transacao;
 
 import br.com.rinha.rinhabackend.cliente.Cliente;
+import br.com.rinha.rinhabackend.transacao.enums.TipoEnum;
 import br.com.rinha.rinhabackend.transacao.form.TransacaoForm;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -18,7 +19,7 @@ public class Transacao {
     private Cliente cliente;
     private int valor;
     private String tipo;
-    private String descricao;
+    private TipoEnum descricao;
     @CreationTimestamp
     private LocalDateTime realizada_em;
 
@@ -49,7 +50,7 @@ public class Transacao {
         return tipo;
     }
 
-    public String getDescricao() {
+    public TipoEnum getDescricao() {
         return descricao;
     }
 

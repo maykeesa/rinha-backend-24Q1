@@ -1,17 +1,16 @@
 package br.com.rinha.rinhabackend.transacao.form;
 
+import br.com.rinha.rinhabackend.transacao.enums.TipoEnum;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 public class TransacaoForm {
 
-    @NotNull
     private int valor;
-    @NotBlank
     private String tipo;
-    @NotBlank
-    private String descricao;
-
+    private TipoEnum descricao;
+    @Size(min = 1, max = 10)
     public TransacaoForm(){
 
     }
@@ -24,7 +23,7 @@ public class TransacaoForm {
         return tipo;
     }
 
-    public String getDescricao() {
+    public TipoEnum getDescricao() {
         return descricao;
     }
 

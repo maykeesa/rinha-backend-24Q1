@@ -34,7 +34,7 @@ public class ClienteController {
     }
 
     @PostMapping("/{id}/transacoes")
-    public ResponseEntity<ClienteDto> postTransacao(@PathVariable int id, @RequestBody @Valid TransacaoForm form){
+    public ResponseEntity<ClienteDto> postTransacao(@PathVariable int id, @RequestBody TransacaoForm form){
         Optional<Cliente> clienteOpt = clienteRep.findById(id);
 
         if(clienteOpt.isPresent()){
