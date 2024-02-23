@@ -4,6 +4,7 @@ import br.com.rinha.rinhabackend.cliente.Cliente;
 import br.com.rinha.rinhabackend.transacao.enums.TipoEnum;
 import br.com.rinha.rinhabackend.transacao.form.TransacaoForm;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
@@ -18,7 +19,9 @@ public class Transacao {
     @ManyToOne
     private Cliente cliente;
     private int valor;
+    @Enumerated(EnumType.STRING)
     private TipoEnum tipo;
+    @Size(min = 1, max = 10)
     private String descricao;
     @CreationTimestamp
     private LocalDateTime realizada_em;

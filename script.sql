@@ -8,8 +8,8 @@ CREATE TABLE public.transacoes (
     id SERIAL PRIMARY KEY,
     cliente_id INT NOT NULL,
     valor INT NOT NULL,
-    tipo VARCHAR NOT NULL,
-    descricao VARCHAR NOT NULL,
+    tipo VARCHAR(1) NOT NULL,
+    descricao VARCHAR(10) NOT NULL,
     realizada_em DATE NOT NULL
 );
 
